@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Switch
+        android:id="@+id/SwitchVibreur"
+        android:layout_width="wrap_content"
+        android:text="Music"
+        android:checked="false"
+        android:theme="@style/MySwitch"
+        android:layout_height="wrap_content"/>
+    <Switch
+        android:id="@+id/SwitchMusic"
+        android:layout_width="wrap_content"
+        android:text= "vibreur"
+        android:checked="false"
+        android:theme="@style/MySwitch"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JeuxPendu</string>
+    <string name="send">Valider</string>
+    <string name="Rejouer">Rejouer</string>
+</resources>
