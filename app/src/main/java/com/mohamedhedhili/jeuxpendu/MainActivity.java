@@ -120,33 +120,33 @@ private boolean verifyLettreinList (Character a  ,  List<Character> caracteres)
 
     private void initialiser ()
     {
-        a.setEnabled(true);
-        z.setEnabled(true);
-        e.setEnabled(true);
-        r.setEnabled(true);
-        t.setEnabled(true);
-        y.setEnabled(true);
-        u.setEnabled(true);
-        i.setEnabled(true);
-        o.setEnabled(true);
-        p.setEnabled(true);
-        q.setEnabled(true);
-        s.setEnabled(true);
-        d.setEnabled(true);
-        f.setEnabled(true);
-        g.setEnabled(true);
-        h.setEnabled(true);
-        j.setEnabled(true);
-        k.setEnabled(true);
-        l.setEnabled(true);
-        m.setEnabled(true);
-        w.setEnabled(true);
-        x.setEnabled(true);
-        c.setEnabled(true);
-        v.setEnabled(true);
-        b.setEnabled(true);
-        n.setEnabled(true);
-        btnTiret6.setEnabled(true);
+        a.setVisibility(View.VISIBLE);
+        z.setVisibility(View.VISIBLE);
+        e.setVisibility(View.VISIBLE);
+        r.setVisibility(View.VISIBLE);
+        t.setVisibility(View.VISIBLE);
+        y.setVisibility(View.VISIBLE);
+        u.setVisibility(View.VISIBLE);
+        i.setVisibility(View.VISIBLE);
+        o.setVisibility(View.VISIBLE);
+        p.setVisibility(View.VISIBLE);
+        q.setVisibility(View.VISIBLE);
+        s.setVisibility(View.VISIBLE);
+        d.setVisibility(View.VISIBLE);
+        f.setVisibility(View.VISIBLE);
+        g.setVisibility(View.VISIBLE);
+        h.setVisibility(View.VISIBLE);
+        j.setVisibility(View.VISIBLE);
+        k.setVisibility(View.VISIBLE);
+        l.setVisibility(View.VISIBLE);
+        m.setVisibility(View.VISIBLE);
+        w.setVisibility(View.VISIBLE);
+        x.setVisibility(View.VISIBLE);
+        c.setVisibility(View.VISIBLE);
+        v.setVisibility(View.VISIBLE);
+        b.setVisibility(View.VISIBLE);
+        n.setVisibility(View.VISIBLE);
+        btnTiret6.setVisibility(View.VISIBLE);
         list.clear();
        listword= generateListFile();
         int random  = (int) (Math.floor(Math.random() * listword.size())) ;
@@ -180,26 +180,12 @@ private boolean verifyLettreinList (Character a  ,  List<Character> caracteres)
               txt.setText(String.valueOf(word.charAt(i)));
               found++ ;
           }
-          else
-          {
-          }
+
       }
     }
 
 
 
-    private boolean verifyLettreInWord2 (String a , String word)
-    {
-        for(int i =0;i<word.length();i++)
-        {
-            if(a.equals(String.valueOf(word.charAt(i))))
-            {   return true ;
-
-            }
-
-        }
-        return  false  ;
-    }
 
 
 
@@ -298,6 +284,20 @@ private boolean verifyLettreinList (Character a  ,  List<Character> caracteres)
                 aideNameFile= "Sport-Aide.txt";
             else if (nameFile.equals("Maison.txt"))
                 aideNameFile= "Maison-Aide.txt";
+            else  if  (nameFile.equals("Ecole.txt"))
+                aideNameFile= "Ecole-Aide.txt";
+            else if (nameFile.equals("Pays-Capitales.txt"))
+                aideNameFile= "Pays-Capitales-Aide.txt";
+            else if (nameFile.equals("Metiers.txt"))
+                aideNameFile= "Metiers-Aide.txt";
+            else if  (nameFile.equals("Histoire.txt"))
+                aideNameFile= "Histoire-Aide.txt";
+            else if (nameFile.equals("Geographic.txt"))
+                aideNameFile= "Geographic-Aide.txt";
+            else if (nameFile.equals("Cartoon.txt"))
+                aideNameFile= "Cartoon-Aide.txt";
+            else if (nameFile.equals("Animaux.txt"))
+                aideNameFile= "Animaux-Aide.txt";
             InputStream input =getAssets().open( aideNameFile);
             InputStreamReader in =new InputStreamReader(input) ;
             BufferedReader buffer =new BufferedReader(in);
@@ -321,143 +321,139 @@ private boolean verifyLettreinList (Character a  ,  List<Character> caracteres)
 
    if  (v.getId() == a.getId()) {
        btn("A") ;
-       if (verifyLettreInWord2("A",word))
-       {a.setBackgroundResource(R.drawable.button_main_style_red);}
-       else
-       {a.setBackgroundResource(R.drawable.button_main_style_green);}
-       a.setEnabled(false);
+       a.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== b.getId())
    {
        btn("B") ;
-       b.setEnabled(false);
+       b.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== c.getId())
    {
        btn("C") ;
-       c.setEnabled(false);
+       c.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== d.getId())
    {
        btn("D") ;
-       d.setEnabled(false);
+       d.setVisibility(View.INVISIBLE);
    }
 
 
    else if (v.getId()== e.getId())
    {
        btn("E") ;
-       e.setEnabled(false);
+       e.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== h.getId())
    {
        btn("H") ;
-       h.setEnabled(false);
+       h.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== j.getId())
    {
        btn("J") ;
-       j.setEnabled(false);
+       j.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== o.getId())
    {
        btn("O") ;
-       o.setEnabled(false);
+       o.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== p.getId())
    {
        btn("P") ;
-       p.setEnabled(false);
+       p.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== l.getId())
    {
        btn("L") ;
-       l.setEnabled(false);
+       l.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== k.getId())
    {
        btn("K") ;
-       k.setEnabled(false);
+       k.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== z.getId())
    {
        btn("Z") ;
-       z.setEnabled(false);
+       z.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== r.getId())
    {
        btn("R") ;
-       r.setEnabled(false);
+       r.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== t.getId())
    {
        btn("T") ;
-       t.setEnabled(false);
+       t.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== y.getId())
    {
        btn("Y") ;
-       y.setEnabled(false);
+       y.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== u.getId())
    {
        btn("U") ;
-       u.setEnabled(false);
+       u.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== i.getId())
    {
        btn("I") ;
-       i.setEnabled(false);
+       i.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== q.getId())
    {
        btn("Q") ;
-       q.setEnabled(false);
+       q.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== s.getId())
    {
        btn("S") ;
-       s.setEnabled(false);
+       s.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== f.getId())
    {
        btn("F") ;
-       f.setEnabled(false);
+       f.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== g.getId())
    {
        btn("G") ;
-       g.setEnabled(false);
+       g.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== m.getId())
    {
        btn("M") ;
-       m.setEnabled(false);
+       m.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== w.getId())
    {
        btn("W") ;
-       w.setEnabled(false);
+       w.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== x.getId())
    {
        btn("X") ;
-       x.setEnabled(false);
+       x.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== this.v.getId())
    {
        btn("V") ;
-       this.v.setEnabled(false);
+      v.setVisibility(View.INVISIBLE);
    }
    else if (v.getId()== n.getId())
    {
        btn("N") ;
-       n.setEnabled(false);
+       n.setVisibility(View.INVISIBLE);
    }
         else if (v.getId()== btnTiret6.getId())
    {
        btn("-") ;
-       btnTiret6.setEnabled(false);
+       btnTiret6.setVisibility(View.INVISIBLE);
    }
    }
 // traitement button
